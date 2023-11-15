@@ -14,7 +14,7 @@ return {
   s({trig="fsnip", snippetType="autosnippet", dscr="Snippet to create snippets"},
     fmta([[
     s({trig="<>", snippetType="<>", dscr="<>"},
-      fmta("<>",
+      fmta(<>,
       {<>}
       )
     ),

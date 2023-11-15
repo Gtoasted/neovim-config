@@ -45,19 +45,39 @@ return {
     )
   ),
 
-  s(
-    {trig="=>", snippetType="autosnippet", dscr="Implies"},
+  s({trig="=>", snippetType="autosnippet", dscr="Implies"},
     {t("\\implies")}
   ),
 
-  s(
-    {trig="<->", snippetType="autosnippet", dscr="Equiv Arrow"},
+  s({trig="<->", snippetType="autosnippet", dscr="Equiv Arrow"},
     {t("\\Leftrightarrow")}
   ),
 
   s({trig="bint", snippetType="autosnippet", dscr="Integral with bounds"},
     fmta("\\int_{<>}^{<>}",
     {i(1), i(2)}
+    )
+  ),
+
+  s({trig="**", snippetType="autosnippet", dscr="dot"},
+    {t("\\cdot")}
+  ),
+
+  s({trig="xx", snippetType="autosnippet", dscr="cross"},
+    {t("\\times")}
+  ),
+
+  s({trig="nabla", snippetType="autosnippet", dscr="Nabla Operator"},
+    {t("\\vec{\\nabla}")}
+  ),
+
+  s({trig="del", snippetType="autosnippet", dscr="Partial differential"},
+    {t("\\partial")}
+  ),
+
+  s({trig="partial", snippetType="snippet", dscr="Partial derivative"},
+    fmta("\\frac{\\partial <>}{\\partial <>} <>",
+    {i(2), i(1), i(0)}
     )
   ),
 }
