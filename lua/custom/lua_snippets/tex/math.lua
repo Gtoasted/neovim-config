@@ -53,6 +53,11 @@ return {
     {t("\\Leftrightarrow")}
   ),
 
+  s(
+    {trig="->", snippetType="autosnippet", dscr="Goes to"},
+    {t("\\rightarrow")}
+  ),
+
   s({trig="bint", snippetType="autosnippet", dscr="Integral with bounds"},
     fmta("\\int_{<>}^{<>}",
     {i(1), i(2)}
@@ -71,13 +76,19 @@ return {
     {t("\\vec{\\nabla}")}
   ),
 
-  s({trig="del", snippetType="autosnippet", dscr="Partial differential"},
+  s({trig="del", snippetType="snippet", dscr="Partial differential"},
     {t("\\partial")}
   ),
 
   s({trig="partial", snippetType="snippet", dscr="Partial derivative"},
     fmta("\\frac{\\partial <>}{\\partial <>} <>",
     {i(2), i(1), i(0)}
+    )
+  ),
+
+  s({trig="||", snippetType="autosnippet", dscr="Norm"},
+    fmta("\\|<>\\|",
+    {i(1)}
     )
   ),
 }
