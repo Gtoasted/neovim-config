@@ -19,9 +19,9 @@ return {
 
   s({trig="dm", snippetType="autosnippet", dscr="Multiline math mode"},
     fmta([[
-      \[
-      <>
-      \]
+        \[
+        <>
+        \]
       ]],
       {i(1)}
     )
@@ -39,9 +39,25 @@ return {
     )
   ),
 
+  s({trig="hat", snippetType="autosnippet", dscr="Hat"},
+    fmta("\\hat{<>}",
+    {i(1)}
+    )
+  ),
+
   s(
     {trig="=>", snippetType="autosnippet", dscr="Implies"},
     {t("\\implies")}
-  )
+  ),
 
+  s(
+    {trig="<->", snippetType="autosnippet", dscr="Equiv Arrow"},
+    {t("\\Leftrightarrow")}
+  ),
+
+  s({trig="bint", snippetType="autosnippet", dscr="Integral with bounds"},
+    fmta("\\int_{<>}^{<>}",
+    {i(1), i(2)}
+    )
+  ),
 }
