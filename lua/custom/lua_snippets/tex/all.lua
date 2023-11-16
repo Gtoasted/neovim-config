@@ -42,4 +42,20 @@ return {
     {i(0)}
     )
   ),
+
+  s({trig="beg", snippetType="snippet", dscr="Begin / End"},
+    fmta([[
+    \begin{<>}
+    <>
+    \end{<>}
+    ]],
+    {i(1), i(0), rep(1)}
+    )
+  ),
+
+  s({trig="par", snippetType="snippet", dscr="Paragraph"},
+    fmta("\\paragraph{<>}\n<>",
+    {i(1), i(0)}
+    )
+  ),
 }
