@@ -5,7 +5,7 @@ return {
     config = function(_)
       vim.g.tex_flavor='latex'
       vim.g.vimtex_view_method='general'
-      vim.g.vimtex_view_general_viewer='firefox'
+      vim.g.vimtex_view_general_viewer='start firefox'
       vim.g.vimtex_quickfix_mode=0
       vim.opt.conceallevel=1
       --vim.g.vimtex_syntax_conceal={}

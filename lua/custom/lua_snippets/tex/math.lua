@@ -92,4 +92,9 @@ return {
     {i(1)}
     )
   ),
+
+  s(
+    {trig="dd", snippetType="autosnippet", dscr="Differential d", condition=math},
+    {t("\\mathbb{d}")}
+  ),
 }
