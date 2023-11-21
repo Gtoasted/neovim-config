@@ -66,6 +66,10 @@ return {
     {t("\\rightarrow")}
   ),
 
+  s({trig=":=", snippetType="autosnippet", dscr="Colon Equals", condition=math},
+    {t("\\coloneqq")}
+  ),
+
   -- Linear Algebra
   s({trig="**", snippetType="autosnippet", dscr="dot", condition=math},
     {t("\\cdot")}
@@ -100,7 +104,7 @@ return {
     )
   ),
 
-  s({trig="d1", snippetType="autosnippet", dscr="Derivative"},
+  s({trig="d1", snippetType="autosnippet", dscr="Derivative", condition=math},
     fmta([[
     \frac{\mathrm{d} <>}{\mathrm{d} <>} <>
     ]],
@@ -124,7 +128,7 @@ return {
     )
   ),
 
-  s({trig="intf", snippetType="autosnippet", dscr="Area Integral"},
+  s({trig="intf", snippetType="autosnippet", dscr="Area Integral", condition=math},
     fmta([[
     \int_{F} <> \;\mathrm{d} \vec{F}
     ]],
@@ -132,7 +136,7 @@ return {
     )
   ),
 
-  s({trig="intv", snippetType="autosnippet", dscr="Volume Integral"},
+  s({trig="intv", snippetType="autosnippet", dscr="Volume Integral", conditon=math},
     fmta([[
     \int_{V} <> \;\mathrm{d} V
     ]],
@@ -140,7 +144,7 @@ return {
     )
   ),
 
-  s({trig="int_", snippetType="autosnippet", dscr="n-d Integral with custom bound"},
+  s({trig="int_", snippetType="autosnippet", dscr="n-d Integral with custom bound", condition=math},
     fmta([[
     \int_{<>} <> \;\mathrm{d} <>
     ]],

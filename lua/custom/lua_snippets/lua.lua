@@ -35,7 +35,7 @@ return {
 
   s({trig="lsnip", snippetType="autosnippet", dscr="Snippet that inserts a special letter"},
     fmta([[
-    s({trig="<>", snippetType="autosnippet", dscr="<>", context=math},
+    s({trig="<>", snippetType="autosnippet", dscr="<>", condition=math},
       {t("<>")}
     ),
     ]],

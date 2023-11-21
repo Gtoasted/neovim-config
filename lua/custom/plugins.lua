@@ -12,6 +12,9 @@ return {
       vim.cmd([[
       hi Conceal ctermbg=none
       ]])
+      vim.g.vimtex_syntax_custom_cmds = {
+        {name = 'vec', mathmode = true , conceal = true, argstyle = 'bold'}
+      }
     end
   },{
     'L3MON4D3/LuaSnip',

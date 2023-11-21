@@ -15,63 +15,63 @@ local function math()
 end
 
 return {
-  s({trig="RR", snippetType="autosnippet", dscr="Real numbers", context=math},
+  s({trig="RR", snippetType="autosnippet", dscr="Real numbers", condition=math},
     {t("\\mathbb{R}")}
   ),
 
-  s({trig="aa", snippetType="autosnippet", dscr="Alpha", context=math},
+  s({trig="aa", snippetType="autosnippet", dscr="Alpha", condition=math},
     {t("\\alpha")}
   ),
 
-  s({trig="bb", snippetType="autosnippet", dscr="Beta", context=math},
+  s({trig="bb", snippetType="autosnippet", dscr="Beta", condition=math},
     {t("\\beta")}
   ),
 
-  s({trig="gg", snippetType="autosnippet", dscr="Gamma", context=math},
+  s({trig="gg", snippetType="autosnippet", dscr="Gamma", condition=math},
     {t("\\gamma")}
   ),
 
-  s({trig="ee", snippetType="autosnippet", dscr="Epsilon", context=math},
+  s({trig="ee", snippetType="autosnippet", dscr="Epsilon", condition=math},
     {t("\\varepsilon")}
   ),
 
-  s({trig="tht", snippetType="autosnippet", dscr="Theta", context=math},
+  s({trig="tht", snippetType="autosnippet", dscr="Theta", condition=math},
     {t("\\theta")}
   ),
 
-  s({trig="ll", snippetType="autosnippet", dscr="Lambda", context=math},
+  s({trig="ll", snippetType="autosnippet", dscr="Lambda", condition=math},
     {t("\\lambda")}
   ),
 
-  s({trig="pi", snippetType="autosnippet", dscr="Pi", context=math},
+  s({trig="pi", snippetType="autosnippet", dscr="Pi", condition=math},
     {t("\\Pi")}
   ),
 
-  s({trig="rho", snippetType="autosnippet", dscr="Rho", context=math},
+  s({trig="rho", snippetType="autosnippet", dscr="Rho", condition=math},
     {t("\\rho")}
   ),
 
-  s({trig="vrho", snippetType="autosnippet", dscr="rho variant", context=math},
+  s({trig="vrho", snippetType="autosnippet", dscr="rho variant", condition=math},
     {t("\\varrho")}
   ),
 
-  s({trig="ss", snippetType="autosnippet", dscr="Sigma", context=math},
+  s({trig="ss", snippetType="autosnippet", dscr="Sigma", condition=math},
     {t("\\sigma")}
   ),
 
-  s({trig="phi", snippetType="autosnippet", dscr="Phi", context=math},
+  s({trig="phi", snippetType="autosnippet", dscr="Phi", condition=math},
     {t("\\phi")}
   ),
 
-  s({trig="vphi", snippetType="autosnippet", dscr="Phi Variant", context=math},
+  s({trig="vphi", snippetType="autosnippet", dscr="Phi Variant", condition=math},
     {t("\\varphi")}
   ),
 
-  s({trig="psi", snippetType="autosnippet", dscr="Psi", context=math},
+  s({trig="psi", snippetType="autosnippet", dscr="Psi", condition=math},
     {t("\\psi")}
   ),
 
-  s({trig="mu", snippetType="autosnippet", dscr="Mu", context=math},
+  s({trig="mu", snippetType="autosnippet", dscr="Mu", condition=math},
     {t("\\mu")}
   ),
 }
