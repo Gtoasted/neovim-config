@@ -70,4 +70,8 @@ return {
   s({trig="psi", snippetType="autosnippet", dscr="Psi", context=math},
     {t("\\psi")}
   ),
+
+  s({trig="mu", snippetType="autosnippet", dscr="Mu", context=math},
+    {t("\\mu")}
+  ),
 }

@@ -17,17 +17,18 @@ end
 
 return {
   s({trig="mk", snippetType="autosnippet", dscr="Inline math mode"},
-    fmta("$<>$",
+    fmta("$ <> $",
     {i(1)}
     )
   ),
 
   s({trig="dm", snippetType="autosnippet", dscr="Multiline math mode"},
-    fmta("$$<>$$",
+    fmta("$$ <> $$",
       {i(1)}
     )
   ),
 
+  -- General
   s({trig="frac", snippetType="autosnippet", dscr="Fraction", condition = math},
     fmta("\\frac{<>}{<>}",
       {i(1), i(2)}
@@ -46,16 +47,22 @@ return {
     )
   ),
 
-  s({trig="=>", snippetType="autosnippet", dscr="Implies"},
+  s({trig="()", snippetType="autosnippet", dscr="Braces", condition=math},
+    fmta("\\left( <> \\right)",
+    {i(1)}
+    )
+  ),
+
+  s({trig="=>", snippetType="autosnippet", dscr="Implies", condition=math},
     {t("\\implies")}
   ),
 
-  s({trig="<->", snippetType="autosnippet", dscr="Equiv Arrow"},
+  s({trig="<->", snippetType="autosnippet", dscr="Equiv Arrow", condition=math},
     {t("\\Leftrightarrow")}
   ),
 
   s(
-    {trig="->", snippetType="autosnippet", dscr="Goes to"},
+    {trig="->", snippetType="autosnippet", dscr="Goes to", condition=math},
     {t("\\rightarrow")}
   ),
 
@@ -77,7 +84,7 @@ return {
     {t("\\mathrm{d} ")}
   ),
 
-  s({trig="dl", snippetType="autosnippet", dscr="Partial differential", condition="math"},
+  s({trig="dl", snippetType="autosnippet", dscr="Partial differential", condition=math},
     {t("\\partial")}
   ),
 
@@ -117,19 +124,19 @@ return {
     )
   ),
 
-  s({trig="inta", snippetType="autosnippet", dscr="Area Integral"},
+  s({trig="intf", snippetType="autosnippet", dscr="Area Integral"},
     fmta([[
-    \int_{A} <> \;\mathrm{d} <>
+    \int_{F} <> \;\mathrm{d} \vec{F}
     ]],
-    {i(1), (i(2))}
+    {i(1)}
     )
   ),
 
   s({trig="intv", snippetType="autosnippet", dscr="Volume Integral"},
     fmta([[
-    \int_{V} <> \;\mathrm{d} <>
+    \int_{V} <> \;\mathrm{d} V
     ]],
-    {i(1), (i(2))}
+    {i(1)}
     )
   ),
 

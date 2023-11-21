@@ -13,7 +13,7 @@ local rep = require("luasnip.extras").rep
 return {
   s({trig="fsnip", snippetType="autosnippet", dscr="Snippet to create snippets"},
     fmta([[
-    s({trig="<>", snippetType="<>", dscr="<>"},
+    s({trig="<>", snippetType="<>", dscr="<>", condition=math},
       fmta(<>,
       {<>}
       )
@@ -25,7 +25,7 @@ return {
 
   s({trig="tsnip", snippetType="autosnippet", dscr="Snippet that inserts text"},
     fmta([[
-    s({trig="<>", snippetType="autosnippet", dscr="<>"},
+    s({trig="<>", snippetType="autosnippet", dscr="<>", condition=math},
       {t("<>")}
     ),
     ]],
