@@ -19,5 +19,12 @@ return {
   },{
     'rafamadriz/friendly-snippets',
     enabled = false,
+  },{
+    'hrsh7th/nvim-cmp',
+    opts = {
+      completion = {
+        keyword_length = 3,
+      }
+    }
   }
 }
