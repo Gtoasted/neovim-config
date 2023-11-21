@@ -25,8 +25,17 @@ return {
 
   s({trig="tsnip", snippetType="autosnippet", dscr="Snippet that inserts text"},
     fmta([[
-    s(
-      {trig="<>", snippetType="autosnippet", dscr="<>"},
+    s({trig="<>", snippetType="autosnippet", dscr="<>"},
+      {t("<>")}
+    ),
+    ]],
+    {i(1), i(2), i(3)}
+    )
+  ),
+
+  s({trig="lsnip", snippetType="autosnippet", dscr="Snippet that inserts a special letter"},
+    fmta([[
+    s({trig="<>", snippetType="autosnippet", dscr="<>", context=math},
       {t("<>")}
     ),
     ]],

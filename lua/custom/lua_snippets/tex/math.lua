@@ -59,12 +59,7 @@ return {
     {t("\\rightarrow")}
   ),
 
-  s({trig="bint", snippetType="autosnippet", dscr="Integral with bounds", condition=math},
-    fmta("\\int_{<>}^{<>}",
-    {i(1), i(2)}
-    )
-  ),
-
+  -- Linear Algebra
   s({trig="**", snippetType="autosnippet", dscr="dot", condition=math},
     {t("\\cdot")}
   ),
@@ -77,24 +72,78 @@ return {
     {t("\\vec{\\nabla}")}
   ),
 
-  s({trig="del", snippetType="autosnippet", dscr="Partial differential", condition="math"},
+  -- Calculus
+  s({trig="dd", snippetType="autosnippet", dscr="Differential d", condition=math},
+    {t("\\mathrm{d} ")}
+  ),
+
+  s({trig="dl", snippetType="autosnippet", dscr="Partial differential", condition="math"},
     {t("\\partial")}
   ),
 
-  s({trig="pd", snippetType="snippet", dscr="Partial derivative", condition=math},
+  s({trig="pd1", snippetType="autosnippet", dscr="Partial derivative", condition=math},
     fmta("\\frac{\\partial <>}{\\partial <>} <>",
     {i(2), i(1), i(0)}
     )
   ),
 
-  s({trig="||", snippetType="autosnippet", dscr="Norm", condition=math},
-    fmta("\\|<>\\|",
-    {i(1)}
+  s({trig="pd2", snippetType="autosnippet", dscr="Partial derivate, 2nd degree", conditon=math},
+    fmta("\\frac{\\partial^2 <>}{\\partial^2 <>} <>",
+    {i(2), i(1), i(0)}
     )
   ),
 
-  s(
-    {trig="dd", snippetType="autosnippet", dscr="Differential d", condition=math},
-    {t("\\mathbb{d}")}
+  s({trig="d1", snippetType="autosnippet", dscr="Derivative"},
+    fmta([[
+    \frac{\mathrm{d} <>}{\mathrm{d} <>} <>
+    ]],
+    {i(2), i(1), i(0)}
+    )
+  ),
+
+  s({trig="int1", snippetType="autosnippet", dscr="Integral with bounds", condition=math},
+    fmta([[
+    \int_{<>}^{<>} <> \; \mathrm{d} <>
+    ]],
+    {i(1), i(2), i(3), i(4)}
+    )
+  ),
+
+  s({trig="int2", snippetType="autosnippet", dscr="Double Integral with bounds", condition=math},
+    fmta([[
+    \int_{<>}^{<>}\;\mathrm{d}<> \;\int_{<>}^{<>}\;\mathrm{d} <> \; <> 
+    ]],
+    {i(1), i(2), i(3), i(4), i(5), i(6), i(7)}
+    )
+  ),
+
+  s({trig="inta", snippetType="autosnippet", dscr="Area Integral"},
+    fmta([[
+    \int_{A} <> \;\mathrm{d} <>
+    ]],
+    {i(1), (i(2))}
+    )
+  ),
+
+  s({trig="intv", snippetType="autosnippet", dscr="Volume Integral"},
+    fmta([[
+    \int_{V} <> \;\mathrm{d} <>
+    ]],
+    {i(1), (i(2))}
+    )
+  ),
+
+  s({trig="int_", snippetType="autosnippet", dscr="n-d Integral with custom bound"},
+    fmta([[
+    \int_{<>} <> \;\mathrm{d} <>
+    ]],
+    {i(1), i(2), i(3)}
+    )
+  ),
+
+  s({trig="norm", snippetType="autosnippet", dscr="Norm", condition=math},
+    fmta("\\|<>\\|",
+    {i(1)}
+    )
   ),
 }
