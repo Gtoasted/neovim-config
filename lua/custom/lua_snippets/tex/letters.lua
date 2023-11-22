@@ -16,7 +16,7 @@ end
 
 return {
   s({trig="RR", snippetType="autosnippet", dscr="Real numbers", condition=math},
-    {t("\\mathbb{R}")}
+    {t("\\RR")}
   ),
 
   s({trig="aa", snippetType="autosnippet", dscr="Alpha", condition=math},
@@ -29,6 +29,10 @@ return {
 
   s({trig="gg", snippetType="autosnippet", dscr="Gamma", condition=math},
     {t("\\gamma")}
+  ),
+
+  s({trig="dd", snippetType="autosnippet", dscr="Delta", condition=math},
+    {t("\\delta")}
   ),
 
   s({trig="ee", snippetType="autosnippet", dscr="Epsilon", condition=math},
@@ -44,7 +48,7 @@ return {
   ),
 
   s({trig="pi", snippetType="autosnippet", dscr="Pi", condition=math},
-    {t("\\Pi")}
+    {t("\\pi")}
   ),
 
   s({trig="rho", snippetType="autosnippet", dscr="Rho", condition=math},
