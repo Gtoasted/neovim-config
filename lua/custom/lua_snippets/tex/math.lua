@@ -112,6 +112,14 @@ return {
     )
   ),
 
+  s({trig="int ", snippetType="autosnippet", dscr="Integral without bounds", condition=math},
+    fmta([[
+    \int <> \; \mathrm{d} <>
+    ]],
+    {i(1), i(2)}
+    )
+  ),
+
   s({trig="int1", snippetType="autosnippet", dscr="Integral with bounds", condition=math},
     fmta([[
     \int_{<>}^{<>} <> \; \mathrm{d} <>
