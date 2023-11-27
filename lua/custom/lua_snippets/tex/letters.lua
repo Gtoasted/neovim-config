@@ -16,7 +16,7 @@ end
 
 return {
   s({trig="RR", snippetType="autosnippet", dscr="Real numbers", condition=math},
-    {t("\\RR")}
+    {t("\\R")}
   ),
 
   s({trig="aa", snippetType="autosnippet", dscr="Alpha", condition=math},
@@ -31,7 +31,7 @@ return {
     {t("\\gamma")}
   ),
 
-  s({trig="dd", snippetType="autosnippet", dscr="Delta", condition=math},
+  s({trig="del", snippetType="autosnippet", dscr="Delta", condition=math},
     {t("\\delta")}
   ),
 

@@ -17,7 +17,7 @@ end
 
 return {
   s({trig="mk", snippetType="autosnippet", dscr="Inline math mode"},
-    fmta("$ <> $",
+    fmta("$<>$",
     {i(1)}
     )
   ),
@@ -84,7 +84,7 @@ return {
   ),
 
   -- Calculus
-  s({trig="dd", snippetType="autosnippet", dscr="Differential d", condition=math},
+  s({trig="df", snippetType="autosnippet", dscr="Differential d", condition=math},
     {t("\\mathrm{d} ")}
   ),
 
