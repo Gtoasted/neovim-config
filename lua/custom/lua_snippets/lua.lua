@@ -42,4 +42,16 @@ return {
     {i(1), i(2), i(3)}
     )
   ),
+
+  s({trig="msnip", snippetType="autosnippet", dscr="Snippet that modifies preceding text"},
+    fmta([[
+    s({trig="(.*)%.<>", regTrig=true, snippetType="autosnippet", dscr="<>", condition=math},
+      {f(function (_, snip)
+        return snip.captures[1] .. "<>"
+      end)}
+    ),
+    ]],
+    {i(1), i(2), i(3)}
+    )
+  ),
 }

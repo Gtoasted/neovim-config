@@ -26,4 +26,10 @@ return {
     {i(1), i(0)}
     )
   ),
+
+  s({trig="it", snippetType="snippet", dscr="italicized"},
+    fmta("\\textit{<>}",
+    {i(1)}
+    )
+  ),
 }

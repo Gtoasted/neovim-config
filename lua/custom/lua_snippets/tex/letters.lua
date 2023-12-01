@@ -78,4 +78,8 @@ return {
   s({trig="mu", snippetType="autosnippet", dscr="Mu", condition=math},
     {t("\\mu")}
   ),
+
+  s({trig="om", snippetType="autosnippet", dscr="Omega", condition=math},
+    {t("\\omega")}
+  ),
 }
