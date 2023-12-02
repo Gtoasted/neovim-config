@@ -21,13 +21,32 @@ return {
     )
   ),
 
+  s({trig="sec", snippetType="snippet", dscr="Section"},
+    fmta([[
+    \section{<>}
+    <>
+    ]],
+    {i(1), i(0)}
+    )
+  ),
+
   s({trig="par", snippetType="snippet", dscr="Paragraph"},
     fmta("\\paragraph{<>}\n<>",
     {i(1), i(0)}
     )
   ),
 
-  s({trig="it", snippetType="snippet", dscr="italicized"},
+  s({trig="enum", snippetType="snippet", dscr="Enumeration"},
+    fmta([[
+    \begin{enumerate}
+      \item <>
+    \end{enumerate}
+    ]],
+    {i(1)}
+    )
+  ),
+
+  s({trig="textit", snippetType="autosnippet", dscr="italicized"},
     fmta("\\textit{<>}",
     {i(1)}
     )
