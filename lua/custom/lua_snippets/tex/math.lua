@@ -44,6 +44,18 @@ return {
     )
   ),
 
+  s({trig="root2", snippetType="autosnippet", dscr="Square root", condition=math},
+    fmta("\\sqrt{<>}",
+    {i(1)}
+    )
+  ),
+
+  s({trig="lim", snippetType="autosnippet", dscr="Limit", condition=math},
+    fmta("\\lim_{<> \\rightarrow <>} <>",
+    {i(1), i(2), i(3)}
+    )
+  ),
+
   s({trig="=>", snippetType="autosnippet", dscr="Implies", condition=math},
     {t("\\implies")}
   ),

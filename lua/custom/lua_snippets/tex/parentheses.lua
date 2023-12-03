@@ -22,4 +22,9 @@ return {
     )
   ),
 
+  s({trig="[]", snippetType="autosnippet", dscr="Brackets", condition=math},
+    fmta("\\left[ <> \\right]",
+    {i(1)}
+    )
+  ),
 }
