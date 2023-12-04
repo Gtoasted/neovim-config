@@ -27,4 +27,10 @@ return {
     {i(1)}
     )
   ),
+
+  s({trig="<>", snippetType="autosnippet", dscr="Left and right angle", condition=math},
+    fmta("\\langle <> \\rangle",
+    {i(1)}
+    )
+  ),
 }

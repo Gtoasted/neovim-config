@@ -82,4 +82,8 @@ return {
   s({trig="om", snippetType="autosnippet", dscr="Omega", condition=math},
     {t("\\omega")}
   ),
+
+  s({trig="Chi", snippetType="autosnippet", dscr="Chi", condition=math},
+    {t("\\mathcal{X}")}
+  ),
 }
