@@ -81,6 +81,12 @@ return {
     )
   ),
 
+  s({trig="(.*)_(%w%w+) ", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
+    {f(function (_, snip)
+      return string.format("%s_{%s} ", snip.captures[1], snip.captures[2])
+    end)}
+  ),
+
   -- Linear Algebra
   s({trig="**", snippetType="autosnippet", dscr="dot", condition=math},
     {t("\\cdot")}

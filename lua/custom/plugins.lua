@@ -1,10 +1,17 @@
+local viewer = ''
+if package.config:sub(1,1) == '/' then
+  viewer = 'zathura'
+else
+  viewer = 'general'
+end
+
 return {
 	{
     'lervag/vimtex',
     lazy = false,
     config = function(_)
       vim.g.tex_flavor='latex'
-      vim.g.vimtex_view_method='general'
+      vim.g.vimtex_view_method=viewer
       vim.g.vimtex_general_viewer_method='SumatraPDF'
       vim.g.vimtex_quickfix_mode=0
       vim.opt.conceallevel=1
