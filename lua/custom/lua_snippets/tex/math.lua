@@ -132,7 +132,7 @@ return {
   ),
 
   s({trig="pd2", snippetType="autosnippet", dscr="Partial derivate, 2nd degree", conditon=math},
-    fmta("\\frac{\\partial^2 <>}{\\partial {<>}^2} <>",
+    fmta("\\frac{\\partial^2 <>}{\\partial <>} <>",
     {i(1), i(2), i(0)}
     )
   ),
