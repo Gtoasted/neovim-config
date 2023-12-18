@@ -101,7 +101,7 @@ return {
   ),
 
   s({trig="norm", snippetType="autosnippet", dscr="Norm", condition=math},
-    fmta("\\|<>\\|",
+    fmta("\\left\\| <> \\right\\|",
     {i(1)}
     )
   ),
