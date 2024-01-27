@@ -46,7 +46,7 @@ return {
     )
   ),
 
-  s({trig="textit", snippetType="autosnippet", dscr="italicized"},
+  s({trig="ita", snippetType="snippet", dscr="italicized"},
     fmta("\\textit{<>}",
     {i(1)}
     )

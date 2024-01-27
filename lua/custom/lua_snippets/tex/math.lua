@@ -30,6 +30,7 @@ return {
   ),
 
   -- General
+  -- Quantors
   s({trig="EE", snippetType="autosnippet", dscr="Existance Quantor", condition=math},
     {t("\\exists")}
   ),
@@ -38,7 +39,8 @@ return {
     {t("\\forall")}
   ),
 
-  s({trig="frac", snippetType="autosnippet", dscr="Fraction", condition = math},
+  -- Operators
+  s({trig="/", snippetType="autosnippet", dscr="Fraction", condition=math},
     fmta("\\frac{<>}{<>}",
       {i(1), i(2)}
     )
@@ -50,12 +52,21 @@ return {
     )
   ),
 
+  s({trig="root(%d)", regTrig=true, snippetType="autosnippet", dscr="nth root", condition=math},
+    fmta("\\root[<>]{<>}",{
+        f(function(_, snip) return snip.captures[1] end),
+        i(1)
+      }
+    )
+  ),
+
   s({trig="lim", snippetType="autosnippet", dscr="Limit", condition=math},
     fmta("\\lim_{<> \\rightarrow <>} <>",
     {i(1), i(2), i(3)}
     )
   ),
 
+  -- Relations
   s({trig="=>", snippetType="autosnippet", dscr="Implies", condition=math},
     {t("\\implies")}
   ),
@@ -73,6 +84,7 @@ return {
     {t("\\coloneqq")}
   ),
 
+  -- Other
   s({trig="sum", snippetType="autosnippet", dscr="Sum from i to n", condition=math},
     fmta([[
     \sum_{i=1}^{n} <>
@@ -81,67 +93,19 @@ return {
     )
   ),
 
-  s({trig="(.*)_(%w%w+) ", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
-    {f(function (_, snip)
-      return string.format("%s_{%s} ", snip.captures[1], snip.captures[2])
-    end)}
-  ),
-
-  -- Linear Algebra
-  s({trig="**", snippetType="autosnippet", dscr="dot", condition=math},
-    {t("\\cdot")}
-  ),
-
-  s({trig="xx", snippetType="autosnippet", dscr="cross", condition=math},
-    {t("\\times")}
-  ),
-
-  s({trig="nabla", snippetType="autosnippet", dscr="Nabla Operator", condition=math},
-    {t("\\vec{\\nabla}")}
-  ),
-
-  s({trig="norm", snippetType="autosnippet", dscr="Norm", condition=math},
-    fmta("\\left\\| <> \\right\\|",
-    {i(1)}
+  s({trig="(.*)_", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
+    fmta("<>_{<>}",{
+        f(function(_, snip) return snip.captures[1] end),
+        i(1)
+      }
     )
   ),
 
-  s({trig="mat", snippetType="snippet", dscr="Matrix", condition=math},
-    fmta([[
-    \begin{pmatrix}
-      <>
-    \end{pmatrix}
-    ]],
-    {i(1)}
-    )
-  ),
-
-  -- Calculus
-  s({trig="df", snippetType="autosnippet", dscr="Differential d", condition=math},
-    {t("\\mathrm{d} ")}
-  ),
-
-  s({trig="dl", snippetType="autosnippet", dscr="Partial differential", condition=math},
-    {t("\\partial")}
-  ),
-
-  s({trig="pd1", snippetType="autosnippet", dscr="Partial derivative", condition=math},
-    fmta("\\frac{\\partial <>}{\\partial <>} <>",
-    {i(1), i(2), i(0)}
-    )
-  ),
-
-  s({trig="pd2", snippetType="autosnippet", dscr="Partial derivate, 2nd degree", conditon=math},
-    fmta("\\frac{\\partial^2 <>}{\\partial <>} <>",
-    {i(1), i(2), i(0)}
-    )
-  ),
-
-  s({trig="d1", snippetType="autosnippet", dscr="Derivative", condition=math},
-    fmta([[
-    \frac{\mathrm{d} <>}{\mathrm{d} <>} <>
-    ]],
-    {i(1), i(2), i(0)}
+  s({trig="(.*)^", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
+    fmta("<>^{<>}",{
+        f(function(_, snip) return snip.captures[1] end),
+        i(1)
+      }
     )
   ),
 }

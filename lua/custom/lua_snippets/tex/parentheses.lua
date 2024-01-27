@@ -33,4 +33,10 @@ return {
     {i(1)}
     )
   ),
+
+  s({trig="set", snippetType="autosnippet", dscr="Braces for sets", condition=math},
+    fmta([[\{ <> \}]],
+    {i(1)}
+    )
+  ),
 }

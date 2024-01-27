@@ -15,6 +15,36 @@ local function math()
 end
 
 return {
+  -- Differentiation
+  s({trig="df", snippetType="autosnippet", dscr="Differential d", condition=math},
+    {t("\\mathrm{d} ")}
+  ),
+
+  s({trig="dl", snippetType="autosnippet", dscr="Partial differential", condition=math},
+    {t("\\partial")}
+  ),
+
+  s({trig="pd1", snippetType="autosnippet", dscr="Partial derivative", condition=math},
+    fmta("\\frac{\\partial <>}{\\partial <>} <>",
+    {i(1), i(2), i(0)}
+    )
+  ),
+
+  s({trig="pd2", snippetType="autosnippet", dscr="Partial derivate, 2nd degree", conditon=math},
+    fmta("\\frac{\\partial^2 <>}{\\partial <>} <>",
+    {i(1), i(2), i(0)}
+    )
+  ),
+
+  s({trig="d1", snippetType="autosnippet", dscr="Derivative", condition=math},
+    fmta([[
+    \frac{\mathrm{d} <>}{\mathrm{d} <>} <>
+    ]],
+    {i(1), i(2), i(0)}
+    )
+  ),
+
+  -- Integration
   s({trig="int ", snippetType="autosnippet", dscr="Integral without bounds", condition=math},
     fmta([[
     \int <> \; \mathrm{d}<>
