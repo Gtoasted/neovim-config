@@ -51,4 +51,14 @@ return {
     {i(1)}
     )
   ),
+
+  s({trig="lst", snippetType="snippet", dscr="Java Code Block"},
+    fmta([[
+    \begin{lstlisting}[language=Java]
+    <>
+    \end{lstlisting}
+    ]],
+    {i(1)}
+    )
+  ),
 }
