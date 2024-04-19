@@ -17,7 +17,7 @@ end
 
 return {
   s({trig="()", snippetType="autosnippet", dscr="Parentheses", condition=math},
-    fmta("\\qty( <> ))",
+    fmta("\\qty( <> )",
     {i(1)}
     )
   ),
