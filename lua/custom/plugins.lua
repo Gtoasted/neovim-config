@@ -25,7 +25,10 @@ return {
       }
     end
   },{'L3MON4D3/LuaSnip',
-    opts = {enable_autosnippets = true}
+    opts = {
+      enable_autosnippets = true,
+      store_selection_keys = "<Tab>",
+    }
   },{'rafamadriz/friendly-snippets',
     enabled = false,
   },{'hrsh7th/nvim-cmp',

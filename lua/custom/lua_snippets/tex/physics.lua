@@ -57,10 +57,21 @@ return {
     end)}
   ),
 
-  s({trig="hat", snippetType="autosnippet", dscr="Hat", condition = math},
-    fmta("\\hat{<>}",
-    {i(1)}
-    )
+  s({trig="(.)%.h", regTrig=true, snippetType="autosnippet", dscr="Hat", condition=math},
+    {f(function (_, snip)
+      return string.format("\\hat{%s}", snip.captures[1])
+    end)}
   ),
 
+  s({trig="(.)%.o", regTrig=true, snippetType="autosnippet", dscr="overline", condition=math},
+    {f(function (_, snip)
+      return string.format("\\overline{%s}", snip.captures[1])
+    end)}
+  ),
+
+  s({trig=[[(\.*)%.o]], regTrig=true, snippetType="autosnippet", dscr="overline", condition=math},
+    {f(function (_, snip)
+      return string.format("\\overline{%s}", snip.captures[1])
+    end)}
+  ),
 }

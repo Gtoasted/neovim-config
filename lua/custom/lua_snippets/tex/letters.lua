@@ -35,6 +35,10 @@ return {
     {t("\\delta")}
   ),
 
+  s({trig="Del", snippetType="autosnippet", dscr="C Delta", condition=math},
+    {t("\\Delta")}
+  ),
+
   s({trig="ee", snippetType="autosnippet", dscr="Epsilon", condition=math},
     {t("\\varepsilon")}
   ),
@@ -75,8 +79,16 @@ return {
     {t("\\psi")}
   ),
 
+  s({trig="Psi", snippetType="autosnippet", dscr="C Psi", condition=math},
+    {t("\\Psi")}
+  ),
+
   s({trig="mu", snippetType="autosnippet", dscr="Mu", condition=math},
     {t("\\mu")}
+  ),
+
+  s({trig="nu", snippetType="autosnippet", dscr="Nu", condition=math},
+    {t("\\nu")}
   ),
 
   s({trig="om", snippetType="autosnippet", dscr="Omega", condition=math},

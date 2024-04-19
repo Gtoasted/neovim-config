@@ -40,9 +40,19 @@ return {
   ),
 
   -- Operators
-  s({trig="/", snippetType="autosnippet", dscr="Fraction", condition=math},
-    fmta("\\frac{<>}{<>}",
-      {i(1), i(2)}
+  s({trig="/(.*)//", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
+    fmta("\\frac{<>}{<>}",{
+        f(function(_, snip) return snip.captures[1] end),
+        i(1),
+      }
+    )
+  ),
+
+  s({trig="(.)/", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
+    fmta("\\frac{<>}{<>}",{
+        f(function(_, snip) return snip.captures[1] end),
+        i(1),
+      }
     )
   ),
 
@@ -87,9 +97,9 @@ return {
   -- Other
   s({trig="sum", snippetType="autosnippet", dscr="Sum from i to n", condition=math},
     fmta([[
-    \sum_{i=1}^{n} <>
+    \sum_{<>}^{<>} <>
     ]],
-    {i(1)}
+    {i(1), i(2), i(0)}
     )
   ),
 

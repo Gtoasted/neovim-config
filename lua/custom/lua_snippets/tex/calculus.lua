@@ -17,7 +17,7 @@ end
 return {
   -- Differentiation
   s({trig="df", snippetType="autosnippet", dscr="Differential d", condition=math},
-    {t("\\mathrm{d} ")}
+    {t("\\d")}
   ),
 
   s({trig="dl", snippetType="autosnippet", dscr="Partial differential", condition=math},
@@ -25,20 +25,20 @@ return {
   ),
 
   s({trig="pd1", snippetType="autosnippet", dscr="Partial derivative", condition=math},
-    fmta("\\frac{\\partial <>}{\\partial <>} <>",
+    fmta("\\pdv{<>}{<>}<>",
     {i(1), i(2), i(0)}
     )
   ),
 
-  s({trig="pd2", snippetType="autosnippet", dscr="Partial derivate, 2nd degree", conditon=math},
-    fmta("\\frac{\\partial^2 <>}{\\partial <>} <>",
-    {i(1), i(2), i(0)}
+  s({trig="pdn", snippetType="autosnippet", dscr="Partial derivate, nth degree", conditon=math},
+    fmta("pdv[<>]{<>}{<>}<>",
+    {i(1), i(2), i(3), i(0)}
     )
   ),
 
   s({trig="d1", snippetType="autosnippet", dscr="Derivative", condition=math},
     fmta([[
-    \frac{\mathrm{d} <>}{\mathrm{d} <>} <>
+    \dv{<>}{<>}<>
     ]],
     {i(1), i(2), i(0)}
     )
@@ -47,7 +47,7 @@ return {
   -- Integration
   s({trig="int ", snippetType="autosnippet", dscr="Integral without bounds", condition=math},
     fmta([[
-    \int <> \; \mathrm{d}<>
+    \int <> \; \dd{<>}
     ]],
     {i(1), i(2)}
     )
@@ -55,7 +55,7 @@ return {
 
   s({trig="int1", snippetType="autosnippet", dscr="Integral with bounds", condition=math},
     fmta([[
-    \int_{<>}^{<>} <> \; \mathrm{d}<>
+    \int_{<>}^{<>} <> \; \dd{<>}
     ]],
     {i(1), i(2), i(3), i(4)}
     )
@@ -63,7 +63,7 @@ return {
 
   s({trig="int2", snippetType="autosnippet", dscr="Double Integral with bounds", condition=math},
     fmta([[
-    \int_{<>}^{<>}\;\mathrm{d}<> \;\int_{<>}^{<>}\;\mathrm{d}<> \; <> 
+    \int_{<>}^{<>}\;\dd<> \;\int_{<>}^{<>}\;\dd{<>} \; <> 
     ]],
     {i(1), i(2), i(3), i(4), i(5), i(6), i(7)}
     )
@@ -71,7 +71,7 @@ return {
 
   s({trig="intf", snippetType="autosnippet", dscr="Area Integral", condition=math},
     fmta([[
-    \int_{F} <> \;\mathrm{d} \vec{F}
+    \int_{F} <> \;\dd{\vec{F}}
     ]],
     {i(1)}
     )
@@ -79,7 +79,7 @@ return {
 
   s({trig="intv", snippetType="autosnippet", dscr="Volume Integral", conditon=math},
     fmta([[
-    \int_{V} <> \;\mathrm{d}V
+    \int_{V} <> \;\dd{V}
     ]],
     {i(1)}
     )
@@ -87,7 +87,7 @@ return {
 
   s({trig="inti", snippetType="autosnippet", dscr="Interal over the Real numbers", condition=math},
     fmta([[
-    \int_{-\infty}^{\infty} <> \;\mathrm{d}<>
+    \int_{-\infty}^{\infty} <> \;\dd{<>}
     ]],
     {i(1), i(2)}
     )
@@ -95,7 +95,7 @@ return {
 
   s({trig="int_", snippetType="autosnippet", dscr="n-d Integral with custom bound", condition=math},
     fmta([[
-    \int_{<>} <> \;\mathrm{d} <>
+    \int_{<>} <> \;\dd{<>}
     ]],
     {i(1), i(2), i(3)}
     )

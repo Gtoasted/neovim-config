@@ -21,7 +21,7 @@ return {
   ),
 
   s({trig="xx", snippetType="autosnippet", dscr="cross", condition=math},
-    {t("\\times")}
+    {t("\\cp")}
   ),
 
   s({trig="nabla", snippetType="autosnippet", dscr="Nabla Operator", condition=math},
