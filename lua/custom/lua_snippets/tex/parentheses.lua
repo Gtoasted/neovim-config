@@ -17,13 +17,13 @@ end
 
 return {
   s({trig="()", snippetType="autosnippet", dscr="Parentheses", condition=math},
-    fmta("\\left( <> \\right)",
+    fmta("\\qty( <> ))",
     {i(1)}
     )
   ),
 
   s({trig="[]", snippetType="autosnippet", dscr="Brackets", condition=math},
-    fmta("\\left[ <> \\right]",
+    fmta("\\qty[ <> ]",
     {i(1)}
     )
   ),
@@ -34,8 +34,8 @@ return {
     )
   ),
 
-  s({trig="set", snippetType="autosnippet", dscr="Braces for sets", condition=math},
-    fmta([[\{ <> \}]],
+  s({trig=" set", snippetType="autosnippet", dscr="Braces for sets", condition=math},
+    fmta([[ \qty{<>}]],
     {i(1)}
     )
   ),
