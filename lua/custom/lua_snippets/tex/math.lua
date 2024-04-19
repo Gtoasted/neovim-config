@@ -48,7 +48,7 @@ return {
     )
   ),
 
-  s({trig="([^ ])/", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
+  s({trig="(%d)/", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
     fmta("\\frac{<>}{<>}",{
         f(function(_, snip) return snip.captures[1] end),
         i(1),
