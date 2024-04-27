@@ -40,15 +40,13 @@ return {
   ),
 
   -- Operators
-  s({trig="/(.*)//", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
-    fmta("\\frac{<>}{<>}",{
-        f(function(_, snip) return snip.captures[1] end),
-        i(1),
-      }
+  s({trig="//", snippetType="autosnippet", dscr="Fraction", condition=math},
+    fmta([[\frac{<>}{<>}]],
+    {i(1),i(2)}
     )
   ),
 
-  s({trig="(%d)/", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
+  s({trig="(%w)/", regTrig=true, snippetType="autosnippet", dscr="Fraction", condition=math},
     fmta("\\frac{<>}{<>}",{
         f(function(_, snip) return snip.captures[1] end),
         i(1),
@@ -103,7 +101,7 @@ return {
     )
   ),
 
-  s({trig="(.*)_", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
+  s({trig="(.*)__", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
     fmta("<>_{<>}",{
         f(function(_, snip) return snip.captures[1] end),
         i(1)
@@ -111,7 +109,7 @@ return {
     )
   ),
 
-  s({trig="(.*)^", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
+  s({trig="(.*)^^", regTrig='true', snippetType="autosnippet", dscr="Automatically add braces around subscripts", condition=math},
     fmta("<>^{<>}",{
         f(function(_, snip) return snip.captures[1] end),
         i(1)

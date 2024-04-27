@@ -30,6 +30,24 @@ return {
     )
   ),
 
+  s({trig="ssec", snippetType="snippet", dscr="Section"},
+    fmta([[
+    \subsection{<>}
+    <>
+    ]],
+    {i(1), i(0)}
+    )
+  ),
+
+  s({trig="sssec", snippetType="snippet", dscr="Section"},
+    fmta([[
+    \subsubsection{<>}
+    <>
+    ]],
+    {i(1), i(0)}
+    )
+  ),
+
   s({trig="par", snippetType="snippet", dscr="Paragraph"},
     fmta("\\paragraph{<>}\n<>",
     {i(1), i(0)}

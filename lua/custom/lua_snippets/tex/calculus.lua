@@ -44,6 +44,14 @@ return {
     )
   ),
 
+  s({trig="d2", snippetType="autosnippet", dscr="Derivative", condition=math},
+    fmta([[
+    \dv[2]{<>}{<>}<>
+    ]],
+    {i(1), i(2), i(0)}
+    )
+  ),
+
   -- Integration
   s({trig="int ", snippetType="autosnippet", dscr="Integral without bounds", condition=math},
     fmta([[

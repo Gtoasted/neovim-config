@@ -61,10 +61,21 @@ return {
         })
       }
     }
-  },{
-    "windwp/nvim-autopairs",
+  },{"windwp/nvim-autopairs",
     opts = {
       disable_filetype = {'tex'},
     }
+  },{"williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "pyright",
+        "texlab",
+      }
+    }
+  },{"neovim/nvim-lspconfig",
+    config = function ()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end
   }
 }

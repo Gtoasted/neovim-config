@@ -51,9 +51,10 @@ return {
     {t("\\lambda")}
   ),
 
-  s({trig="pi", snippetType="autosnippet", dscr="Pi", condition=math},
-    {t("\\pi")}
-  ),
+  s({trig="([%d%s]?)pi", regTrig=true, snippetType="autosnippet", dscr="Pi", condition=math}, {
+    f(function(_, snip) return snip.captures[1] end),
+    t("\\pi")
+  }),
 
   s({trig="rho", snippetType="autosnippet", dscr="Rho", condition=math},
     {t("\\rho")}
