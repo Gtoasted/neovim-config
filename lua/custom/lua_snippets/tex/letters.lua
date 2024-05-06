@@ -14,26 +14,32 @@ local function math()
   return vim.api.nvim_eval('vimtex#syntax#in_mathzone()') == 1
 end
 
+-- Automatically creates snippets that replace one letter with another
 local cfg = {}
 local letters = {
   RR = [[\R]],
   CC = [[\C]],
 
+  HH = [[\mathcal{H}]],
+  hbar = [[\hbar]],
+
   aa = [[\alpha]],
   bb = [[\beta]],
   gam = [[\gamma]],
   del = [[\delta]],
-  Del = [[\\Delta]],
+  Del = [[\Delta]],
   ee = [[\varepsilon]],
   tht = [[\theta]],
+  kk = [[\kappa]],
   lam = [[\lambda]],
   pi = [[\pi]],
   rho = [[\rho]],
   ss = [[\sigma]],
   SS = [[\Sigma]],
+  tau = [[\tau]],
   phi = [[\phi]],
   vphi = [[\varphi]],
-  psi = [[\varpsi]],
+  psi = [[\psi]],
   mu = [[\mu]],
   nu = [[\nu]],
   om = [[\omega]],
@@ -41,9 +47,10 @@ local letters = {
 }
 
 for k,v in pairs(letters) do
-  table.insert(cfg, s({trig="(%w*)" .. k, regTrig=true, snippetType="autosnippet", dscr="", condition=math},
-    {f(function(_, snip) return snip.captures[1] .. v end)}
-))
+  table.insert(cfg,
+    s({trig="(%d*)" .. k, regTrig=true, snippetType="autosnippet", dscr="", condition=math},
+      {f(function(_, snip) return snip.captures[1] .. v end)}
+  ))
 end
 
 return cfg

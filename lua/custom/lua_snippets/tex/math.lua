@@ -61,7 +61,7 @@ return {
   ),
 
   s({trig="root(%d)", regTrig=true, snippetType="autosnippet", dscr="nth root", condition=math},
-    fmta("\\root[<>]{<>}",{
+    fmta("\\sqrt[<>]{<>}",{
         f(function(_, snip) return snip.captures[1] end),
         i(1)
       }
@@ -93,11 +93,19 @@ return {
   ),
 
   -- Other
-  s({trig="sum", snippetType="autosnippet", dscr="Sum from i to n", condition=math},
+  s({trig="sum ", snippetType="autosnippet", dscr="Sum", condition=math},
     fmta([[
     \sum_{<>}^{<>} <>
     ]],
     {i(1), i(2), i(0)}
+    )
+  ),
+
+  s({trig="sum_", snippetType="autosnippet", dscr="Sum", condition=math},
+    fmta([[
+    \sum_{<>} <>
+    ]],
+    {i(1), i(0)}
     )
   ),
 
