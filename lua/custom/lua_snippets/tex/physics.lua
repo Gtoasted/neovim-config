@@ -19,8 +19,8 @@ local cfg = {}
 -- Snippets that wrap a single character
 local modifiers = {
   v = [[\vec{%s}]],
-  ["d "] = [[\dot{%s}]],
-  ["d  "] = [[\ddot{%s}]],
+  ["do"] = [[\dot{%s}]],
+  ["ddo"] = [[\ddot{%s}]],
   dv = [[\dot{\vec{%s}}]],
   ddv = [[\ddot{\vec{%s}}]],
   t = [[\tilde{%s}]],
@@ -54,13 +54,13 @@ local other = {
   ),
 
   s({trig="bra ", snippetType="autosnippet", dscr="Bra", condition=math},
-    fmta([[\bra{<>} <>]],
+    fmta([[\bra{<>}<>]],
     {i(1), i(0)}
     )
   ),
 
   s({trig="ket ", snippetType="autosnippet", dscr="Ket", condition=math},
-    fmta([[\ket{<>} <>]],
+    fmta([[\ket{<>}<>]],
     {i(1), i(0)}
     )
   ),
@@ -74,6 +74,12 @@ local other = {
   s({trig="ketbra", snippetType="autosnippet", dscr="Ket", condition=math},
     fmta([[\ketbra{<>}{<>} <>]],
     {i(1), i(2), i(0)}
+    )
+  ),
+
+  s({trig="mean", snippetType="autosnippet", dscr="Mean", condition=math},
+    fmta([[\langle <> \rangle]],
+    {i(1)}
     )
   ),
 }
